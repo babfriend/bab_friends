@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="kr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="BaeSungYun">
+  <meta name="Keywords" content="babfriend">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <title>밥친구_join</title>
+  <!-- <script>
+	  function pw_check() {
+	var join_form = document.member_form;
+		is_Null_Check(2); 
+		is_Null_Check(3); // 패쓰워드/확인 null check !
+			
+			if (join_form.member_pw.value !=  join_form.member_pw2.value)  {
+			
+					alert("비밀번호가 일치하지 않습니다. 다시 입력 하십시오");
+					join_form.member_pw2.focus();
+					
+			}
+			
+	}
+	// total form check
+	//  usage : <form name="member_form" action="member_insert.php" method="post" onSubmit='total_joinform_check()'>
+  </script> -->
+ </head>
+ <body>
+ 
+	<style>
+	body { padding-top: 40px; padding-bottom: 40px; background-color:#ff6600;color:#ff6600;}
+	.container{background-color:#ffffff; border-radius:25px;float: center;}
+	.bab-header{ text-align:center;font-weight:900;}
+	.form-signin { max-width: 330px; padding: 15px; margin: 0 auto;	}
+	.form-signin .form-signin-heading,.form-signin .checkbox {  margin-bottom: 10px;}
+	.form-signin .checkbox {  font-weight: normal;}	
+	.form-signin .form-control { position: relative; height: auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px; font-size: 16px;	}
+	.form-signin .form-control:focus {  z-index: 2;	}
+	.form-signin input[type="id"] {  margin-bottom: -1px;  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;	}
+	.form-signin input[type="password"] {  margin-bottom: 10px;  border-top-left-radius: 0;  border-top-right-radius: 0;	}
+	#pw {margin-bottom:0; border-radius:0px;}
+	button {margin-top:30px;}
+	</style>
+	<script>
+	$('form').on('submit',function(){
+   if($('#pw').val()!= $('#pwc').val()){
+       alert('Password not matches');
+       return false;
+   }
+   return true;
+   });
+	</script>
+    <div class="container col-xs-10 col-sm-6 col-md-8">
+		<h1 class="bab-header">Bab-friends</h1>
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">입력해주세요</h2>
+        <input type="id" class="form-control" placeholder="@ajou.ac.kr" required autofocus >
+		<input type="id" class="form-control" placeholder="Nickname" required>
+        <input type="password" class="form-control" placeholder="Password" required id="pw">
+		<input type="password" class="form-control" placeholder="Retype Password" required id="pwc">
+
+        <button class="btn btn-lg btn-block" type="submit" onmouseover="this.style.background='#ff6600'" onmouseout="this.style.background='#D5D5D5'">Make</button>
+      </form>
+
+    </div> <!-- /container -->
+  
+ </body>
+</html>

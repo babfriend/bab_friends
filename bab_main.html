@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="kr">
+ <head>
+  <title>밥친구_main</title>
+  <meta charset="UTF-8">
+  <meta name="Author" content="BaeSungYun">
+  <meta name="Keywords" content="babfriend">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+ </head>
+<body>
+	<style>
+	body { padding-top: 40px; padding-bottom: 40px; background-color:#ff6600;color:#ff6600;}
+	.container{background-color:#ffffff; border-radius:25px;float: center;}
+	.bab-header{ text-align:center;font-weight:900; }
+	.form-signin { max-width: 330px; padding: 15px; margin: 0 auto;	}
+	.form-signin .form-signin-heading,.form-signin .checkbox {  margin-bottom: 10px;}
+	.form-signin .checkbox {  font-weight: normal;}	
+	.form-signin .form-control { position: relative; height: auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px; font-size: 16px;	}
+	.form-signin .form-control:focus {  z-index: 2;	}
+	.form-signin input[type="id"] {  margin-bottom: -1px;  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;	}
+	.form-signin input[type="password"] {  margin-bottom: 10px;  border-top-left-radius: 0;  border-top-right-radius: 0;	}
+	#joinbutton {margin-bottom:10px;}
+	</style>
+    <div class="container col-xs-10 col-sm-6 col-md-8">
+<h1 class="bab-header">Bab-friends</h1>
+<!--<img class="bab-"src="..." alt="..." class="img-rounded"> 이미지 사이즈보려고 했는데 임시이미지url까먹음-->
+      <form class="form-signin" role="form" action="login_check.php" method="post">
+        <h4 class="form-signin-heading">fill form</h4>
+        <input type="id" name="user_id" class="form-control" placeholder="ID" autofocus >
+        <input type="password" name="user_pw" class="form-control" placeholder="Password"><!--required 필수요소검사-->
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> remember
+        </label>
+        <button id="joinbutton" class="btn btn-lg btn-block" type="submit" onmouseover="this.style.background='#ff6600'" onmouseout="this.style.background='#D5D5D5'" onclick="">Sign in</button>
+		<input type="button" class="btn btn-lg btn-block" type="submit" onmouseover="this.style.background='#ff6600'" onmouseout="this.style.background='#D5D5D5'"  onclick="window.location.href='bab_join.html';" value="Join in">
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  </body>
+</html>
