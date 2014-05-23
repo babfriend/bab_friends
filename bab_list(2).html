@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="kr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="BaeSungYun">
+  <meta name="Keywords" content="babfriend">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="test.js"></script>
+  <title>밥친구_list</title>
+ </head>
+ <body>
+ <style>
+body { padding-top: 40px; padding-bottom: 40px; background-color:#ff6600;color:#ff6600;}
+	.container{background-color:#ffffff; border-radius:25px;padding:10px;}
+.bab-header{ text-align:center; font-weight:900;}
+.nav-pills{ background-color:#bbb; border-radius:5px;font-weight:600px;}
+.nav li {list-style-type: none; color:#ff6600; }
+ ul.nav.nav-pills li{margin: 0; padding: 0; width: 50%;}
+ .post li{display:inline; float:left;margin:10px;border:solid;}
+ .nav.nav-pills li input button {font-size:2.5em;}
+ .btn .btn-lg .btn-block{font-size:25pt}
+ </style>
+ <a href="bab_main.html">로고</a>
+  <div class="container">
+  <h1 class="bab-header">Bab-friends</h1>
+      <div class="header">
+        <ul class="nav nav-pills">
+          <li><input type="button" class="btn btn-lg btn-block" type="submit" style="font-size=30pt" onmouseover="this.style.background='#ff6600';this.style.color='#ffffff'" onmouseout="this.style.background='#D5D5D5';this.style.color='#ff6600'"  onclick="window.location.href='bab_list(2).html';" value="LIST"></li>
+          <li><input type="button" class="btn btn-lg btn-block" type="submit" onmouseover="this.style.background='#ff6600'" onmouseout="this.style.background='#D5D5D5'"  onclick="window.location.href='bab_setting.html';" value="SETTING"></li>
+        </ul><!--작업중 네비움직이게&make버튼&a에서 form이나 input으로 전환-->
+		<input type="button" value="SETTING">
+      </div>
+	  <div class="post">
+
+		<ul class="post">
+			<li>title</li><li>time</li><li>menu</li>
+			<ul id="a">
+			</ul>
+		</ul>
+
+	  </div>
+	</div>
+ </body>
+</html>

@@ -4,7 +4,7 @@ if((!$_POST["title"]) || (!$_POST["content"])){
 	exit;
 }
 
-$mysqli = mysqli_connect("localhost", "root", "brightstar1993","bab_friends");
+$mysqli = mysqli_connect("localhost", "root", "apmsetup","bab_friends");
 $addpost_sql = "INSERT INTO `post` (`title`, `post_time`, `location`, `content`, `menu`) VALUES (' ".$_POST["title"]." ', now( ),  '".$_POST["location"]."', '".$_POST["content"]."', '".$_POST["menu"]."')";
 
 $addpost_res = mysqli_query($mysqli, $addpost_sql) or 
