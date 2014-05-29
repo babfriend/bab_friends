@@ -3,7 +3,7 @@ $db_host = "localhost";
 $db_user = "root"; 
 $db_passwd = "brightstar1993";
 $db_name = "bab_friends"; 
-
+//fhflfhflfhfhlfhlfhl
 if(!isset($_GET["post_no"])) {
 	header("Location: postlist.php");
 	exit;

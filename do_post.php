@@ -15,11 +15,6 @@ mysqli_close($mysqli);
 
 $display_block = "<P>The <strong>".$_POST["title"]."</strong> post has been created.</p>";
 ?>
-<html>
-<head>
-<title>New Post Added</title>
-</head>
-<body>
-<?php echo $display_block; ?>
-</body>
-</html>
+<?php 
+echo("test");
+?>

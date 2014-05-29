@@ -9,9 +9,9 @@ $upw = $_POST["user_pw"];
 $conn = mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
 if (mysqli_connect_errno($conn)) 
 	{
-		echo "µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á ½ÇÆĞ: " . mysqli_connect_error();
+		echo "ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ì‹¤íŒ¨: " . mysqli_connect_error();
 	} 
-else //DB¿¬°áµÊ
+else //DBì—°ê²°ë¨
 	{
 		$query = "SELECT * FROM users WHERE id='$uid' AND pw='$upw';";
 		$result= $conn->query($query);
@@ -21,7 +21,7 @@ else //DB¿¬°áµÊ
 			//echo $content;
 			echo $uid;
 			echo $upw;
-			echo "¼º°ø";
+			echo "ì„±ê³µ";
 			//session open
 ?>
 	<script>
@@ -31,9 +31,11 @@ else //DB¿¬°áµÊ
 		}
 		else
 		{
+			$warning="ì•„ì´ë”” í˜¹ì€ íŒ¨ìŠ¤ì›Œë“œë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”";
+			$warning=iconv("utf8","euckr",$warning);
 ?>
 	<script>
-		alert("¾ÆÀÌµğ È¤Àº ÆĞ½º¿öµå¸¦ È®ÀÎÇØÁÖ¼¼¿ä");
+		alert($warning);
 		window.history.back();
 	</script>
 
