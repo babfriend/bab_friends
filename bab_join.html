@@ -8,36 +8,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <title>밥친구_join</title>
- </head>
- <body>
- 
-	<style>
-	body { padding-top: 40px; padding-bottom: 40px; background-color:#ff6600;color:#ff6600;}
-	.container{background-color:#ffffff; border-radius:25px;float: center;}
+  <style>
+	body {margin-top:2px; padding-bottom: 40px; background-color:#ff6600;color:#ff6600;}
+	.container{background-color:#ffffff; border-radius:20px;margin-top:3px; float: center;}
 	.bab-header{ text-align:center;font-weight:900;}
 	.form-signin { max-width: 330px; padding: 15px; margin: 0 auto;	}
 	.form-signin .form-signin-heading,.form-signin .checkbox {  margin-bottom: 10px;}
 	.form-signin .checkbox {  font-weight: normal;}	
 	.form-signin .form-control { position: relative; height: auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px; font-size: 16px;	}
 	.form-signin .form-control:focus {  z-index: 2;	}
-	.form-signin input[type="id"] {  margin-bottom: -1px;  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;	}
+	.idbox {  margin-bottom: -1px;  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;	}
 	.form-signin input[type="password"] {  margin-bottom: 10px;  border-top-left-radius: 0;  border-top-right-radius: 0;	}
 	#pw {margin-bottom:0; border-radius:0px;}
 	button {margin-top:30px;}
+	#logo{display:block; margin:0 auto 0 auto;}
 	</style>
+	<script>
+	function checkPasswordMatch() {alert("WORK?!");
+		var password = $("#pw").val();
+		var confirmPassword = $("#pxc").val();
+
+		alert("WORK?!");
+
+		if (password != confirmPassword)
+			alert("Passwords do not match!");
+		window.history.back();
+		else
+			alert("Passwords match.");
+		window.history.back();
+	}
+	</script>
+ </head>
+ <body>	
+	<input type="image" src="image/image.png" width="265px" height="60px" value="logo" id="logo" onclick="window.location.href='bab_main.html';">
     <div class="container col-xs-10 col-sm-6 col-md-8">
 		<h1 class="bab-header">Bab-friends</h1>
-      <form class="form-signin" role="form" action="join_check.php" method="post"><!--join_check의php으로 수정-->
+      <form class="form-signin" role="form" action="postlist.php" method="post">
         <h2 class="form-signin-heading">입력해주세요</h2>
-        <input type="id" name="user_id" class="form-control" placeholder="@ajou.ac.kr" required autofocus >
+        <input type="id" name="user_id" class="form-control idbox" placeholder="ID" required autofocus >
 		<input type="id" name="unick_name" class="form-control" placeholder="Nickname" required>
+		<input type="id" name="user_email" class="form-control" placeholder="@ajou.ac.kr" required >
         <input type="password" name="pw" class="form-control" placeholder="Password" required id="pw">
-		<input type="password" name="rpw" class="form-control" placeholder="Retype Password" required id="pwc"><!-- pw재대로 쳤는지도 판단해줭 -->
-
-        <button class="btn btn-lg btn-block" type="submit" onmouseover="this.style.background='#ff6600'" onmouseout="this.style.background='#D5D5D5'">Make</button>
+		<input type="password" name="rpw" class="form-control" placeholder="Retype Password" id="pwc" onkeyup="checkPasswordMatch();" required >
+        <button class="btn btn-lg btn-block" type="submit" onmouseover="this.style.background='#ff6600'" onmouseout="this.style.background='#D5D5D5'"onclick="checkPasswordMatch();">Make</button>
       </form>
-
-    </div> <!-- /container -->
+    </div>
   
  </body>
 </html>
